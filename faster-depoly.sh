@@ -225,6 +225,6 @@ main()
         
         Download_C30sample
     fi
-
+    echo "depoly finish"
 }
 main
