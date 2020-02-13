@@ -193,34 +193,42 @@ main()
             fi
         fi
 
-        grep "\<export tools_version=$DDK_VERSION\>" $HOME/.bashrc >/dev/null 2>&1
+        grep -Fx "export tools_version=$DDK_VERSION" $HOME/.bashrc >/dev/null 2>&1
         if [ $? -ne 0 ];then
             echo "export tools_version=$DDK_VERSION" >> $HOME/.bashrc
         fi
-        grep "\<export DDK_HOME=\$HOME/.mindstudio/huawei/ddk/\$tools_version/ddk\>" $HOME/.bashrc >/dev/null 2>&1
+        grep -Fx "export DDK_HOME=\$HOME/.mindstudio/huawei/ddk/\$tools_version/ddk" $HOME/.bashrc >/dev/null 2>&1
         if [ $? -ne 0 ];then
             echo "export DDK_HOME=\$HOME/.mindstudio/huawei/ddk/\$tools_version/ddk" >> $HOME/.bashrc
         fi
-        grep "\<export NPU_DEVICE_LIB=\$DDK_HOME/../RC/host-aarch64_Ubuntu16.04.3/lib\>" $HOME/.bashrc >/dev/null 2>&1
+        grep -Fx "export NPU_DEVICE_LIB=\$DDK_HOME/../RC/host-aarch64_Ubuntu16.04.3/lib" $HOME/.bashrc >/dev/null 2>&1
         if [ $? -ne 0 ];then
             echo "export NPU_DEVICE_LIB=\$DDK_HOME/../RC/host-aarch64_Ubuntu16.04.3/lib" >> $HOME/.bashrc
         fi
-        grep "\<export LD_LIBRARY_PATH=\$DDK_HOME/lib/x86_64-linux-gcc5.4\>" $HOME/.bashrc >/dev/null 2>&1
+        grep -Fx "export LD_LIBRARY_PATH=\$DDK_HOME/lib/x86_64-linux-gcc5.4:\$DDK_HOME/uihost/lib" $HOME/.bashrc >/dev/null 2>&1
         if [ $? -ne 0 ];then
-            echo "export LD_LIBRARY_PATH=\$DDK_HOME/lib/x86_64-linux-gcc5.4" >> $HOME/.bashrc
+            echo "export LD_LIBRARY_PATH=\$DDK_HOME/lib/x86_64-linux-gcc5.4:\$DDK_HOME/uihost/lib" >> $HOME/.bashrc
+        fi
+        grep -Fx "export PATH=\$PATH:\$DDK_HOME/uihost/bin" $HOME/.bashrc >/dev/null 2>&1
+        if [ $? -ne 0 ];then
+            echo "export PATH=\$PATH:\$DDK_HOME/uihost/bin" >> $HOME/.bashrc
         fi
         source $HOME/.bashrc
 
         Download_C31sample
         
     else
-        grep "\<export DDK_HOME=\$HOME/tools/che/ddk/ddk\>" $HOME/.bashrc >/dev/null 2>&1
+        grep -Fx "export DDK_HOME=\$HOME/tools/che/ddk/ddk" $HOME/.bashrc >/dev/null 2>&1
         if [ $? -ne 0 ];then
             echo "export DDK_HOME=\$HOME/tools/che/ddk/ddk" >> $HOME/.bashrc
         fi
-        grep "\<export LD_LIBRARY_PATH=\$DDK_HOME/uihost/lib\>" $HOME/.bashrc >/dev/null 2>&1
+        grep -Fx "export LD_LIBRARY_PATH=\$DDK_HOME/uihost/lib" $HOME/.bashrc >/dev/null 2>&1
         if [ $? -ne 0 ];then
             echo "export LD_LIBRARY_PATH=\$DDK_HOME/uihost/lib" >> $HOME/.bashrc
+        fi
+        grep -Fx "export PATH=\$PATH:\$DDK_HOME/uihost/bin" $HOME/.bashrc >/dev/null 2>&1
+        if [ $? -ne 0 ];then
+            echo "export PATH=\$PATH:\$DDK_HOME/uihost/bin" >> $HOME/.bashrc
         fi
         
         Download_C30sample
