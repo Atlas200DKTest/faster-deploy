@@ -8,9 +8,9 @@ function download()
     License_OK=$2
     model_shape=`head -1 ${model_path}/shape_${model_name}`
     if [ ! -f "${script_path}/${model_name}.om" ];then
-        download_url_caffemodel="https://obs-model-ascend.obs.cn-east-2.myhuaweicloud.com/${model_name}/${model_name}.caffemodel"
-	download_url_prototxt="https://obs-model-ascend.obs.cn-east-2.myhuaweicloud.com/${model_name}/${model_name}.prototxt"
-        download_url_license="https://obs-model-ascend.obs.cn-east-2.myhuaweicloud.com/${model_name}/LICENSE"
+        download_url_caffemodel="https://obs-model-ascend.obs.cn-east-2.myhuaweicloud.com/fast_rcnn/${model_name}.caffemodel"
+	download_url_prototxt="https://obs-model-ascend.obs.cn-east-2.myhuaweicloud.com/fast_rcnn/${model_name}.prototxt"
+        download_url_license="https://obs-model-ascend.obs.cn-east-2.myhuaweicloud.com/fast_rcnn/LICENSE"
         wget -O ${model_path}/${model_name}.caffemodel ${download_url_caffemodel} --no-check-certificate
 	wget -O ${model_path}/${model_name}.prototxt ${download_url_prototxt} --no-check-certificate
         if [[ ${License_OK} == "1" ]];then
