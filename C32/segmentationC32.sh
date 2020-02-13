@@ -58,7 +58,7 @@ main()
         return 1
     fi
 
-    download "erfnet" "1"
+    download "erfnet" "0"
     download "Fcn8s"  "0"
 }
 main
