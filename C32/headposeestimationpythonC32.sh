@@ -57,7 +57,7 @@ main()
         return 1
     fi  
 
-    git clone https://gitee.com/Atlas200DK/sample-headposeestimation-python.git $HOME/AscendProjects/sample-headposeestimation-python --branch 1.3x.0.0
+    git clone https://gitee.com/Atlas200DK/sample-headposeestimation-python.git $HOME/AscendProjects/sample-headposeestimation-python
     if [[ $? -ne 0 ]];then
         echo "[ERROR] Clone faild, Please check your environment"
         return 1
