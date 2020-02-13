@@ -53,7 +53,7 @@ main()
         return 1
     fi
 
-    git clone https://gitee.com/Atlas200DK/sample-crowdcounting-python.git $HOME/AscendProjects/sample-crowdcounting-python --branch 1.3x.0.0
+    git clone https://gitee.com/Atlas200DK/sample-crowdcounting-python.git $HOME/AscendProjects/sample-crowdcounting-python
     if [[ $? -ne 0 ]];then
         echo "[ERROR] Clone faild, Please check your environment"
         return 1
