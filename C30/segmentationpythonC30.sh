@@ -1,5 +1,5 @@
 #!/bin/bash
-script_path="$HOME/sample-segmentation-python/models"
+script_path="$HOME/sample-segmentation-python/segmentationapp/models"
 model_path="$HOME/sample-segmentation-python/MyModel"
 function download()
 {
