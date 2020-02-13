@@ -57,7 +57,7 @@ main()
         return 1
     fi  
 
-    git clone https://gitee.com/Atlas200DK/sample-headposeestimation.git $HOME/AscendProjects/sample-headposeestimation --branch 1.3x.0.0
+    git clone https://gitee.com/Atlas200DK/sample-headposeestimation.git $HOME/AscendProjects/sample-headposeestimation
     if [[ $? -ne 0 ]];then
         echo "[ERROR] Clone faild, Please check your environment"
         return 1
