@@ -1,6 +1,6 @@
 #!/bin/bash
 script_path="$HOME/AscendProjects/sample-segmentation-python/models"
-model_path="$HOME/AscendProjects/sample-segmentation-python/MyModel"
+model_path="$HOME/AscendProjects/sample-segmentation-python/segmentationapp/MyModel"
 
 function download()
 {
