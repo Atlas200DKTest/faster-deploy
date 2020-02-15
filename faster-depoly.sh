@@ -148,18 +148,18 @@ main()
     echo "faster-depoly start"
 
     echo "Current ddk-version list:"
-    echo "1.1.X.X"
-    echo "1.3.X.X"
-    echo "1.31.T15.B150"
-    echo "1.31.T20.B200"
-    read -p "Please input your ddk-verison in this list(eg:1.31.T15.B150):" DDK_VERSION
+    echo "1:1.1.X.X"
+    echo "2:1.3.X.X"
+    echo "3:1.31.T15.B150"
+    echo "4:1.31.T20.B200"
+    read -p "Please input your ddk-verison in this list(eg:3):" DDK_VERSION
     if [[ ! $DDK_VERSION ]]; then
         echo "[ERROR] Input empty,please input ddk-verison(eg:1.31.T15.B150)"
         return 1
     else
-        if [ $DDK_VERSION"z" = "1.1.X.Xz" ] || [ $DDK_VERSION"z" = "1.3.X.Xz" ]; then
+        if [ $DDK_VERSION"z" = "1z" ] || [ $DDK_VERSION"z" = "2z" ]; then
             Version="C30"
-        elif [ $DDK_VERSION"z" = "1.31.T15.B150z" ] || [ $DDK_VERSION"z" = "1.31.T20.B200z" ]; then
+        elif [ $DDK_VERSION"z" = "3z" ] || [ $DDK_VERSION"z" = "4z" ]; then
             Version="C31"
         else
             echo "[ERROR] Input ddk-version Error,Please check your input"
