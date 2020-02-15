@@ -159,8 +159,12 @@ main()
     else
         if [ $DDK_VERSION"z" = "1z" ] || [ $DDK_VERSION"z" = "2z" ]; then
             Version="C30"
-        elif [ $DDK_VERSION"z" = "3z" ] || [ $DDK_VERSION"z" = "4z" ]; then
+        elif [ $DDK_VERSION"z" = "3z" ]; then
             Version="C31"
+            DDK_VERSION="1.31.T15.B150"
+        elif [ $DDK_VERSION"z" = "4z" ]; then
+            Version="C31"
+            DDK_VERSION="1.31.T20.B200"
         else
             echo "[ERROR] Input ddk-version Error,Please check your input"
             return 1
