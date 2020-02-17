@@ -68,5 +68,8 @@ main()
     download "face_detection" "1"
     download "vanillacnn"  "0"
     download "sphereface" "1"
+
+    echo "After deployment, please follow the link from the 编译 step in Readme to continue running the case."
+    echo "https://gitee.com/Atlas200DK/sample-facialrecognition/tree/1.3x.0.0/"
 }
 main

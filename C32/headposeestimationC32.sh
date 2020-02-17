@@ -65,5 +65,8 @@ main()
 
     download "face_detection" "1"
     download "head_pose_estimation"  "0"
+
+    echo "After deployment, please follow the link from the 编译 step in Readme to continue running the case."
+    echo "https://gitee.com/Atlas200DK/sample-headposeestimation"
 }
 main

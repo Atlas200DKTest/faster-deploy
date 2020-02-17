@@ -26,34 +26,49 @@ Download_C31sample()
         read -p "Please input your want download sample number in list(eg:1).:" NumberofSample
         if [[ $NumberofSample == "1" ]];then
             bash ./C32/facedetectionC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "2" ]];then
             bash ./C32/facialrecognitionC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "3" ]];then
             bash ./C32/videoanalysispersonC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "4" ]];then
             bash ./C32/videoanalysiscarC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "5" ]];then
             bash ./C32/ascendcameraC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "6" ]];then
             bash ./C32/classificationC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "7" ]];then
             bash ./C32/objectdetectionC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "8" ]];then
             bash ./C32/faceantispoofingC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "9" ]];then
             bash ./C32/headposeestimationC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "10" ]];then
             bash ./C32/colorizationC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "11" ]];then
             bash ./C32/carplaterecognitionC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "12" ]];then
             bash ./C32/segmentationC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "13" ]];then
             bash ./C32/crowdcountingC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "14" ]];then
             bash ./C32/faceemotionC32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "15" ]];then
             bash ./C32/objectdetectionbyyolov3C32.sh
+            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
         elif [[ $NumberofSample == "16" ]];then
             bash ./C32/headposeestimationpythonC32.sh
         elif [[ $NumberofSample == "17" ]];then
@@ -146,29 +161,42 @@ Download_C30sample()
 main()
 {
     echo "faster-depoly start"
+    number=0
 
-    echo "Current ddk-version list:"
-    echo "1:1.1.X.X"
-    echo "2:1.3.X.X"
-    echo "3:1.31.T15.B150"
-    echo "4:1.31.T20.B200"
-    read -p "Please input your ddk-verison in this list(eg:3):" DDK_VERSION
-    if [[ ! $DDK_VERSION ]]; then
-        echo "[ERROR] Input empty,please input ddk-verison(eg:1.31.T15.B150)"
-        return 1
+    ddk_flag=`find $HOME/tools/che/ddk/ddk -maxdepth 1 -name "ddk_info" 2> /dev/null`
+    if [[ $ddk_flag ]];then
+        Version="C30"
     else
-        if [ $DDK_VERSION"z" = "1z" ] || [ $DDK_VERSION"z" = "2z" ]; then
-            Version="C30"
-        elif [ $DDK_VERSION"z" = "3z" ]; then
+        all_ddk_path=`find $HOME/.mindstudio/huawei/ddk/ -maxdepth 1 -name "*.*.*.*" 2> /dev/null`
+        if [[ $all_ddk_path ]];then
             Version="C31"
-            DDK_VERSION="1.31.T15.B150"
-        elif [ $DDK_VERSION"z" = "4z" ]; then
-            Version="C31"
-            DDK_VERSION="1.31.T20.B200"
+            echo "The currently installed ddk version numbers are as follows:"
+            for ddk_path in ${all_ddk_path}
+            do
+                ((number=number+1))
+                DDK_VERSIONS[$number]=`basename ${ddk_path}`
+                echo "$number:${DDK_VERSIONS[$number]}"
+            done
         else
-            echo "[ERROR] Input ddk-version Error,Please check your input"
+            echo "[ERROR]Please install DDK first"
             return 1
         fi
+    fi
+    if [[ $number -ge 2 ]];then
+        read -p "Since multiple DDKs are installed,Please input your ddk-verison in this list(eg:1):" DDK_VERSION_NUM
+        if [[ ! $DDK_VERSION_NUM ]]; then
+            echo "[ERROR] Input empty,please input ddk-verison(eg:1)"
+            return 1
+        else
+            if [ "$DDK_VERSION_NUM" -gt 0 ] 2>/dev/null ; then
+                DDK_VERSION=${DDK_VERSIONS[$DDK_VERSION_NUM]}
+            else
+                echo "[ERROR] Input ddk-version Error,Please check your input"
+                return 1
+            fi
+        fi
+    elif [[ $number -eq 1 ]];then
+        DDK_VERSION=${DDK_VERSIONS[1]}
     fi
 
     sudo apt-get update

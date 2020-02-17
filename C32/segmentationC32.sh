@@ -61,5 +61,8 @@ main()
 
     download "erfnet" "0"
     download "Fcn8s"  "0"
+
+    echo "After deployment, please follow the link from the 编译 step in Readme to continue running the case."
+    echo "https://gitee.com/Atlas200DK/sample-segmentation/tree/1.3x.0.0/"
 }
 main

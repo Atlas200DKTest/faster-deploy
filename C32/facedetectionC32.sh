@@ -48,5 +48,8 @@ main()
     else
         echo "face_detection.om exists, skip downloading."
     fi
+
+    echo "After deployment, please follow the link from the 编译 step in Readme to continue running the case."
+    echo "https://gitee.com/Atlas200DK/sample-facedetection/tree/1.3x.0.0/"
 }
 main

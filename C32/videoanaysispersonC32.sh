@@ -77,5 +77,8 @@ main()
     download "inception_age" "0"
     download "inception_gender" "0"
     download "vgg_ssd" "1"
+
+    echo "After deployment, please follow the link from the 编译 step in Readme to continue running the case."
+    echo "https://gitee.com/Atlas200DK/sample-videoanalysisperson/tree/1.3x.0.0/"
 }
 main

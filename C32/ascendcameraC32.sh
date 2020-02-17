@@ -30,5 +30,7 @@ main()
         echo "[ERROR] Clone faild, Please check your environment"
         return 1
     fi 
+    echo "After deployment, please follow the link from the 编译 step in Readme to continue running the case."
+    echo "https://gitee.com/Atlas200DK/sample-ascendcamera/tree/1.3x.0.0/"
 }
 main
