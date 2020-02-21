@@ -1,7 +1,7 @@
 #!/bin/bash
 Download_C31sample()
 {
-    echo "Current All sample and them number list:"
+    echo "Current samples and corresponding numbers:"
         echo "1.sample-facedetection"
         echo "2.sample-facialrecognition"
         echo "3.sample-videoanalysisperson"
@@ -23,52 +23,52 @@ Download_C31sample()
         echo "19.sample-crowdcounting-python"
         echo "20.sample-segmentation-python"
         echo "21.sample-fasterrcnndetection-python"
-        read -p "Please input your want download sample number in list(eg:1).:" NumberofSample
+        read -p "Please input the number of sample you want to download(eg:1):" NumberofSample
         if [[ $NumberofSample == "1" ]];then
             bash ./C32/facedetectionC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "2" ]];then
             bash ./C32/facialrecognitionC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "3" ]];then
             bash ./C32/videoanalysispersonC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "4" ]];then
             bash ./C32/videoanalysiscarC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "5" ]];then
             bash ./C32/ascendcameraC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "6" ]];then
             bash ./C32/classificationC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "7" ]];then
             bash ./C32/objectdetectionC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "8" ]];then
             bash ./C32/faceantispoofingC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "9" ]];then
             bash ./C32/headposeestimationC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "10" ]];then
             bash ./C32/colorizationC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "11" ]];then
             bash ./C32/carplaterecognitionC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "12" ]];then
             bash ./C32/segmentationC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "13" ]];then
             bash ./C32/crowdcountingC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "14" ]];then
             bash ./C32/faceemotionC32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "15" ]];then
             bash ./C32/objectdetectionbyyolov3C32.sh
-            echo "The environment variables are set in the script. If you are the first download of the sample, please reopen the terminal and open mindstudio, otherwise the environment variables will not take effect"
+            echo "[INFO]The environment variables are set in the script. If this is your first download, please reopen the terminal and start Mind Studio, other the environment variables will not take effect."
         elif [[ $NumberofSample == "16" ]];then
             bash ./C32/headposeestimationpythonC32.sh
         elif [[ $NumberofSample == "17" ]];then
@@ -183,7 +183,7 @@ main()
         fi
     fi
     if [[ $number -ge 2 ]];then
-        read -p "Since multiple DDKs are installed,Please input your ddk-verison in this list(eg:1):" DDK_VERSION_NUM
+        read -p "Several DDK are detected. Please input your DDK verison in this list(eg:1):" DDK_VERSION_NUM
         if [[ ! $DDK_VERSION_NUM ]]; then
             echo "[ERROR] Input empty,please input ddk-verison(eg:1)"
             return 1
@@ -201,16 +201,16 @@ main()
 
     sudo apt-get update
     if [[ $? -ne 0 ]];then
-        echo "[ERROR] Please check if the network is connected or Check if the sources in /etc/apt/sources.list are available"
+        echo "[ERROR] Please make sure you are connected to the Internet and check the source in /etc/apt/sources.list is available."
         return 1
     fi
 
     git --version
     if [[ $? -ne 0 ]];then
-        echo "[INFO] git installation ... ..."
+        echo "[INFO] Installing git..."
         sudo apt-get install git
         if [[ $? -ne 0 ]];then
-            echo "[ERROR] Install git faild ,Please manually install"
+            echo "[ERROR] Failed to install git, please install git manually"
             return 1
         fi
     fi
@@ -220,22 +220,21 @@ main()
         if [[ ! $AscendProjects_flag ]];then
             mkdir $HOME/AscendProjects
             if [[ $? -ne 0 ]];then
-                echo "[ERROR] Execute mkdir command failed, Please check your environment"
+                echo "[ERROR] mkdir failed. Please make sure you have the right permission"
                 return 1
             fi
         fi
-
+        
         grep -Fx "export tools_version=$DDK_VERSION" $HOME/.bashrc >/dev/null 2>&1
         if [ $? -ne 0 ];then
             echo "export tools_version=$DDK_VERSION" >> $HOME/.bashrc
+            echo "export DDK_HOME=\$HOME/.mindstudio/huawei/ddk/\$tools_version/ddk" >> $HOME/.bashrc
+            echo "export LD_LIBRARY_PATH=\$DDK_HOME/lib/x86_64-linux-gcc5.4:\$DDK_HOME/uihost/lib" >> $HOME/.bashrc
+            echo "export PATH=\$PATH:\$DDK_HOME/uihost/bin" >> $HOME/.bashrc
         fi
         grep -Fx "export DDK_HOME=\$HOME/.mindstudio/huawei/ddk/\$tools_version/ddk" $HOME/.bashrc >/dev/null 2>&1
         if [ $? -ne 0 ];then
             echo "export DDK_HOME=\$HOME/.mindstudio/huawei/ddk/\$tools_version/ddk" >> $HOME/.bashrc
-        fi
-        grep -Fx "export NPU_DEVICE_LIB=\$DDK_HOME/../RC/host-aarch64_Ubuntu16.04.3/lib" $HOME/.bashrc >/dev/null 2>&1
-        if [ $? -ne 0 ];then
-            echo "export NPU_DEVICE_LIB=\$DDK_HOME/../RC/host-aarch64_Ubuntu16.04.3/lib" >> $HOME/.bashrc
         fi
         grep -Fx "export LD_LIBRARY_PATH=\$DDK_HOME/lib/x86_64-linux-gcc5.4:\$DDK_HOME/uihost/lib" $HOME/.bashrc >/dev/null 2>&1
         if [ $? -ne 0 ];then
@@ -265,6 +264,6 @@ main()
         
         Download_C30sample
     fi
-    echo "depoly finish"
+    echo "[INFO] Finish to deploy."
 }
 main

@@ -2,17 +2,20 @@
 
 main()
 {
-    echo "facedetectionpythonapp prepareing"
+    echo "Deploying facedetectionpythonapp..."
 
     C31_flag=`find $HOME/AscendProjects -maxdepth 1 -name "sample-facedetection-python" 2> /dev/null`
     if [[ $C31_flag ]];then
-        read -p "[INFO] The sample-facedetection-python is existence.Do you want to re-prepare ? [Y/N]: " response
+        read -p "[INFO] The sample-facedetection-python already exists. Do you want to replace it? [Y/N]:" response
         if [ $response"z" = "Nz" ] || [ $response"z" = "nz" ]; then
             echo "Exit prepareing"
             return 1
         elif [ $response"z" = "Yz" ] || [ $response"z" = "yz" ] || [ $response"z" = "z" ]; then
-            echo "[INFO] Please manually delete $HOME/AscendProjects/sample-facedetection-python director and re-execute this script"
-            return 1
+            rm -rf $HOME/AscendProjects/sample-facedetection-python
+            if [[ $? -ne 0 ]];then
+                echo "[ERROR] Execute rm command failed. Please manually delete $HOME/AscendProjects/sample-facedetection-python director and re-execute this script."
+                return 1
+            fi
         else
             echo "[ERROR] Please input Y/N!"
             return 1
@@ -21,13 +24,13 @@ main()
     
     mkdir $HOME/AscendProjects/sample-facedetection-python
     if [[ $? -ne 0 ]];then
-        echo "[ERROR] Execute mkdir command failed, Please check your environment"
+        echo "[ERROR] Execute mkdir command failed. Please make sure you have the right permission."
         return 1
     fi  
 
     git clone https://gitee.com/Atlas200DK/sample-facedetection-python.git $HOME/AscendProjects/sample-facedetection-python
     if [[ $? -ne 0 ]];then
-        echo "[ERROR] Clone faild, Please check your environment"
+        echo "[ERROR] Git clone failed. Please check your network connection."
         return 1
     fi
 
@@ -41,14 +44,13 @@ main()
         wget -O $HOME/AscendProjects/sample-facedetection-python/MyModel/LICENSE ${download_url_license} --no-check-certificate
         export SLOG_PRINT_TO_STDOUT=1 && export PATH=${PATH}:${DDK_HOME}/uihost/toolchains/ccec-linux/bin/ && export LD_LIBRARY_PATH=${DDK_HOME}/uihost/lib/ && export TVM_AICPU_LIBRARY_PATH=${DDK_HOME}/uihost/lib/:${DDK_HOME}/uihost/toolchains/ccec-linux/aicpu_lib && export TVM_AICPU_INCLUDE_PATH=${DDK_HOME}/include/inc/tensor_engine && export PYTHONPATH=${DDK_HOME}/site-packages && export TVM_AICPU_OS_SYSROOT=/usr/aarch64-linux-gnu && ${DDK_HOME}/uihost/bin/omg --output="$HOME/AscendProjects/sample-facedetection-python/MyModel/face_detection" --check_report=$HOME/AscendProjects/sample-facedetection-python/MyModel/face_detection_result.json --plugin_path= --model="$HOME/AscendProjects/sample-facedetection-python/MyModel/face_detection.prototxt" --framework=0 --ddk_version=${tools_version} --weight="$HOME/AscendProjects/sample-facedetection-python/MyModel/face_detection.caffemodel" --input_shape=${model_shape} --insert_op_conf=$HOME/AscendProjects/sample-facedetection-python/MyModel/aipp_face_detection.cfg --op_name_map=$HOME/AscendProjects/sample-facedetection-python/MyModel/reassign_operators
         if [ $? -ne 0 ];then
-            echo "ERROR: download failed, please check network connetction."
+            echo "[ERROR] Download failed. Please check your network connection."
             return 1
         fi
     else
         echo "face_detection.om exists, skip downloading."
     fi
 
-    echo "After deployment, please follow the link from the 编译 step in Readme to continue running the case."
-    echo "https://gitee.com/Atlas200DK/sample-facedetection-python"
+    echo "[INFO] Please follow the link from the 编译 step in Readme to continue running the case.(https://gitee.com/Atlas200DK/sample-facedetection-python)"
 }
 main
