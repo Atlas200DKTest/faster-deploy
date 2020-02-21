@@ -264,6 +264,6 @@ main()
         
         Download_C30sample
     fi
-    echo "[INFO] Finish to deploy."
+    echo "[INFO] Finish to deploy. APP directory in $HOME/AscendProjects/"
 }
 main
