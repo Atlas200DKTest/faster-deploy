@@ -3,14 +3,13 @@
 #### 使用方法
     1.使用source命令执行faster-depoly脚本，命令示例如下:
         **source faster-depoly.sh**
-    2.执行后，会要求填入当前ddk版本号，选择对应版本号填入。
-        如ddk版本为1.31.T20.B200，填入方式如下：
-        Current ddk-version list:
-        1.1.X.X
-        1.3.X.X
-        1.31.T15.B150
-        1.31.T20.B200
-        Please input your ddk-verison in this list(eg:1.31.T15.B150):1.31.T20.B200
+    2.执行后，会自动检查当前ddk版本号.
+        如果安装了多个ddk，则需要选择对应版本号填入。
+        如安装了1.31.T20.B200和1.31.T15.B150两个版本的DDK，当前需要部署B200的样例,填入方式如下：
+        The currently installed ddk version numbers are as follows:
+        1:1.31.T20.B200
+        2:1.31.T15.B150
+        Several DDK are detected. Please input your DDK verison in this list(eg:1):1
     3.会要求输入用户密码，正常输入即可
     4.给出所有样例列表，填入下载的样例序号即可。
         如需要下载sample-facedetection，填入方式如下：
