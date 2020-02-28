@@ -6,6 +6,7 @@ main()
     echo "Current ddk-version list:"
     echo "1.1.31.T15.B150"
     echo "2.1.31.T20.B200"
+    echo "3.1.32.0.B080"
     read -p "Please input your ddk-verison in this list(eg:1):" DDK_VERSION
     if [[ ! $DDK_VERSION ]]; then
         echo "[ERROR] Input empty,please input ddk-verison(eg:1)"
@@ -17,6 +18,9 @@ main()
         elif [[ $DDK_VERSION"z" = "2z" ]];then
             Version="1.31"
             DDK_VERSION="T20.B200"
+        elif [[ $DDK_VERSION"z" = "3z" ]];then
+            Version="1.32"
+            DDK_VERSION="0.B080"
         else
             echo "[ERROR] Input ddk-version Error,Please check your input"
             return 1
