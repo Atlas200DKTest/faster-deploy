@@ -160,7 +160,7 @@ Download_C30sample()
 
 main()
 {
-    echo "faster-depoly start"
+    echo "faster-deploy start"
     number=0
 
     ddk_flag=`find $HOME/tools/che/ddk/ddk -maxdepth 1 -name "ddk_info" 2> /dev/null`
