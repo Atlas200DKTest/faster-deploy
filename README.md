@@ -1,9 +1,9 @@
-# faster-depoly
+# faster-deploy
 
 ## 使用方法
-1. 使用source命令执行faster-depoly脚本，命令示例如下:
+1. 使用source命令执行faster-deploy脚本，命令示例如下:
 
-    **source faster-depoly.sh**
+    **source faster-deploy.sh**
 
 2. 执行后，会自动检查当前ddk版本号.
 如果安装了多个ddk，则需要选择对应版本号填入。
