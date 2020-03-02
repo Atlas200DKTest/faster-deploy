@@ -1,7 +1,20 @@
 # faster-deploy
 
 ## 使用方法
-1. 使用source命令执行faster-deploy脚本，命令示例如下:
+1. 下载快速部署脚本。
+    ubuntu服务器的命令行中执行以下命令进入\\$HOME目录。
+
+    **cd \\$HOME**
+
+    命令行中使用以下命令下载faster-deploy脚本。
+
+    **git clone https://gitee.com/Atlas200DK/faster-deploy.git**
+    
+    进入faster-deploy文件夹下。
+
+    **cd faster-deploy**
+
+2. 使用source命令执行faster-deploy脚本，命令示例如下:
 
     **source faster-deploy.sh**
 
