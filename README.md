@@ -3,71 +3,71 @@
 ## 使用方法
 1. 使用source命令执行faster-depoly脚本，命令示例如下:
 
-**source faster-depoly.sh**
+    **source faster-depoly.sh**
 
 2. 执行后，会自动检查当前ddk版本号.
 如果安装了多个ddk，则需要选择对应版本号填入。
 如安装了1.31.T20.B200和1.31.T15.B150两个版本的DDK，当前需要部署B200的样例,填入方式如下：
 
-The currently installed ddk version numbers are as follows:
+    The currently installed ddk version numbers are as follows:
 
-1:1.31.T20.B200
+    1:1.31.T20.B200
 
-2:1.31.T15.B150
+    2:1.31.T15.B150
 
-Several DDK are detected. Please input your DDK verison in this list(eg:1):1
+    Several DDK are detected. Please input your DDK verison in this list(eg:1):1
 
 3. 会要求输入用户密码，正常输入即可。
 4. 给出所有样例列表，填入下载的样例序号即可。
 如需要下载sample-facedetection，填入方式如下：
 
-Current All sample and them number list:
+    Current All sample and them number list:
 
-1.sample-facedetection
+    1.sample-facedetection
 
-2.sample-facialrecognition
+    2.sample-facialrecognition
 
-3.sample-videoanalysisperson
+    3.sample-videoanalysisperson
 
-4.sample-videoanalysiscar
+    4.sample-videoanalysiscar
 
-5.sample-ascendcamera
+    5.sample-ascendcamera
 
-6.sample-classification
+    6.sample-classification
 
-7.sample-objectdetection
+    7.sample-objectdetection
 
-8.sample-faceantispoofing
+    8.sample-faceantispoofing
 
-9.sample-headposeestimation
+    9.sample-headposeestimation
 
-10.sample-colorization
+    10.sample-colorization
 
-11.sample-carplaterecognition
+    11.sample-carplaterecognition
 
-12.sample-segmentation
+    12.sample-segmentation
 
-13.sample-crowdcounting
+    13.sample-crowdcounting
 
-14.sample-faceemotion
+    14.sample-faceemotion
 
-15.sample-objectdetectionbyyolov3
+    15.sample-objectdetectionbyyolov3
 
-16.sample-headposeestimation-python
+    16.sample-headposeestimation-python
 
-17.sample-facedetection-python
+    17.sample-facedetection-python
 
-18.sample-classification-python
+    18.sample-classification-python
 
-19.sample-crowdcounting-python
+    19.sample-crowdcounting-python
 
-20.sample-segmentation-python
+    20.sample-segmentation-python
 
-21.sample-fasterrcnndetection-python
+    21.sample-fasterrcnndetection-python
 
-Please input your want download sample number in list(eg:1).:1
+    Please input your want download sample number in list(eg:1).:1
 
-5.等待下载即可。
+5. 等待下载即可。
 
 ## 注意事项
 1. 由于脚本会配置环境变量，环境变量包含DDK版本信息，所以Mindstudio需要在使用新的DDK首次执行脚本后再打开，否则Mindstudio中无法读取最新的环境变量，从而样例运行失败。
