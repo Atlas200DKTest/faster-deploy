@@ -19,7 +19,7 @@ CN|[EN](README_EN.md)
 
     **source faster-deploy.sh**
 
-2. 执行后，会自动检查当前ddk版本号.
+3. 执行后，会自动检查当前ddk版本号.
 如果安装了多个ddk，则需要选择对应版本号填入。
 如安装了1.31.T20.B200和1.31.T15.B150两个版本的DDK，当前需要部署B200的样例,填入方式如下：
 
@@ -31,8 +31,8 @@ CN|[EN](README_EN.md)
 
     Several DDK are detected. Please input your DDK verison in this list(eg:1):1
 
-3. 会要求输入用户密码，正常输入即可。
-4. 给出所有样例列表，填入下载的样例序号即可。
+4. 会要求输入用户密码，正常输入即可。
+5. 给出所有样例列表，填入下载的样例序号即可。
 如需要下载sample-facedetection，填入方式如下：
 
     Current All sample and them number list:
@@ -81,7 +81,7 @@ CN|[EN](README_EN.md)
 
     Please input your want download sample number in list(eg:1).:1
 
-5. 等待下载即可。
+6. 等待下载即可。
 
 ## 注意事项
 1. 由于脚本会配置环境变量，环境变量包含DDK版本信息，所以Mindstudio需要在使用新的DDK首次执行脚本后再打开，否则Mindstudio中无法读取最新的环境变量，从而样例运行失败。
