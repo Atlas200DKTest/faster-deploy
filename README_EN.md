@@ -10,7 +10,7 @@ EN|[CN](README.md)
 
     Using the following command to download faster deployment script in the Terminal.
     
-    **git clone https://gitee.com/Atlas200DK/faster-deploy.git**
+    **git clone https://github.com/Atlas200DKTest/faster-deploy.git**
     
     Enter the folder of faster deployment.
 
