@@ -10,7 +10,7 @@ CN|[EN](README_EN.md)
 
     命令行中使用以下命令下载faster-deploy脚本。
 
-    **git clone https://gitee.com/Atlas200DK/faster-deploy.git**
+    **git clone https://github.com/Atlas200DKTest/faster-deploy.git**
     
     进入faster-deploy文件夹下。
 
