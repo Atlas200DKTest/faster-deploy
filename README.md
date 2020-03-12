@@ -1,6 +1,7 @@
+CN|[EN](README_EN.md)
+
 # faster-deploy
 
-CN|[EN](README_EN.md)
 ## 使用方法
 1. 下载快速部署脚本。
     ubuntu服务器的命令行中执行以下命令进入\\$HOME目录。
