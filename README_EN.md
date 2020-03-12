@@ -1,3 +1,5 @@
+EN|[CN](README.md)
+
 # faster-deploy
 
 ## Instruction
