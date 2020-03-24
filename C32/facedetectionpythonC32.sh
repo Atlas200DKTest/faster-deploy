@@ -51,6 +51,6 @@ main()
         echo "face_detection.om exists, skip downloading."
     fi
 
-    echo "[INFO] Please follow the link from the 编译 step in Readme to continue running the case.(https://gitee.com/Atlas200DK/sample-facedetection-python)"
+    echo "[INFO] Please follow the link from the 环境部署 step in Readme to continue running the case.(https://gitee.com/Atlas200DK/sample-facedetection-python)"
 }
 main

@@ -64,6 +64,6 @@ main()
 
     download "resnet18" "0"
 
-    echo "[INFO] Please follow the link from the 编译 step in Readme to continue running the case.(https://gitee.com/Atlas200DK/sample-classification-python)"
+    echo "[INFO] Please follow the link from the 环境部署 step in Readme to continue running the case.(https://gitee.com/Atlas200DK/sample-classification-python)"
 }
 main

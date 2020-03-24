@@ -69,6 +69,6 @@ main()
     download "face_detection" "1"
     download "head_pose_estimation"  "0"
 
-    echo "[INFO] Please follow the link from the 编译 step in Readme to continue running the case.(https://gitee.com/Atlas200DK/sample-headposeestimation-python)"
+    echo "[INFO] Please follow the link from the 环境部署 step in Readme to continue running the case.(https://gitee.com/Atlas200DK/sample-headposeestimation-python)"
 }
 main

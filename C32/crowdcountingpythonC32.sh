@@ -64,6 +64,6 @@ main()
 
     download "crowd_counting" "1"
 
-    echo "[INFO] Please follow the link from the 编译 step in Readme to continue running the case.(https://gitee.com/Atlas200DK/sample-crowdcounting-python)"
+    echo "[INFO] Please follow the link from the 环境部署 step in Readme to continue running the case.(https://gitee.com/Atlas200DK/sample-crowdcounting-python)"
 }
 main
